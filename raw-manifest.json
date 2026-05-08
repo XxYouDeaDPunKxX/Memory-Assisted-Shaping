@@ -1,0 +1,67 @@
+{
+  "name": "Memory-Assisted Shaping",
+  "type": "AI continuity protocol",
+  "description": "A ChatGPT Projects protocol for shaping one idea across a long conversation without losing decisions, gates, discarded paths, or source boundaries.",
+  "page_url": "https://xxyoudeadpunkxx.github.io/Memory-Assisted-Shaping/",
+  "repository": "https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping",
+  "runtime": "ChatGPT Projects with append-only Python note persistence",
+  "purpose": "Keep long idea-shaping sessions coherent without turning notes into the work surface.",
+  "operating_model": [
+    "GPT shapes the idea before producing an artifact.",
+    "GPT emits a minimal memory signal when continuity would degrade without retention.",
+    "Python timestamps and appends the signal.",
+    "GPT does not own, normalize, or rewrite memory files.",
+    "The final artifact is produced only after explicit approval."
+  ],
+  "tracked_state": [
+    "decisions",
+    "open gates",
+    "discarded paths",
+    "source boundaries",
+    "artifact readiness"
+  ],
+  "live_signal_types": [
+    "mode",
+    "shape",
+    "gate",
+    "decision",
+    "discard",
+    "tension",
+    "source",
+    "artifact"
+  ],
+  "repository_files": [
+    {
+      "path": "protocol.md",
+      "purpose": "Behavioral protocol GPT should follow while shaping one active idea."
+    },
+    {
+      "path": "note-io.md",
+      "purpose": "Boundary between GPT signals and Python persistence."
+    },
+    {
+      "path": "notes.py",
+      "purpose": "Python helper that appends internal notes."
+    }
+  ],
+  "generated_session_files": [
+    "session_meta.json",
+    "session_notes.jsonl",
+    "session_export.json"
+  ],
+  "usage": [
+    "Add the project files to ChatGPT Project Source.",
+    "Tell GPT: Read protocol.md and use Memory-Assisted Shaping for this session.",
+    "Ask for a recap when state matters.",
+    "Ask for a final artifact only when the shape is ready."
+  ],
+  "keywords": [
+    "AI protocol",
+    "ChatGPT Projects",
+    "long session continuity",
+    "idea shaping",
+    "append-only notes",
+    "source boundaries",
+    "Memory-Assisted Shaping"
+  ]
+}
