@@ -1,59 +1,51 @@
 # Memory-Assisted Shaping
 
-A lightweight ChatGPT Projects protocol that keeps long idea-shaping sessions structurally coherent: GPT follows real gates and source boundaries, uses append-only internal notes to avoid drift, and produces clean final artifacts only after approval.
+A ChatGPT Projects protocol for shaping one idea across a long conversation without losing decisions, gates, discarded paths, or source boundaries.
+
+It keeps shaping notes separate from the final artifact.
+
+## Use with ChatGPT Projects
+
+Add the project files to ChatGPT Project Source.
+
+Tell GPT:
+
+> Use Memory-Assisted Shaping for this idea.
+
+Then work normally.
+
+Ask for a recap when state matters.  
+Ask for a final artifact only when the shape is ready.
 
 ## Why this exists
 
-Long ChatGPT conversations can drift.
+Long ChatGPT conversations drift.
 
-An example starts to look like a decision.  
-A discarded path comes back later.  
-A rough idea turns into a half-spec before it is ready.  
-The final output starts carrying pieces of the messy conversation.
+Examples become decisions.  
+Discarded paths return.  
+Open questions disappear.  
+The final output starts carrying process residue.
 
-Memory-Assisted Shaping gives GPT a small way to keep the thread while one idea is being shaped.
+Memory-Assisted Shaping gives GPT a small continuity layer without turning the conversation into note management.
 
-The notes are not something you maintain.  
-They are internal signals GPT can write in the background so it does not lose important decisions, open points, discarded paths, or changes in direction.
+## Operating model
 
-The final artifact is separate.  
-It is produced only when the idea is clear enough and you explicitly ask for it.
+GPT shapes the idea before producing an artifact.
 
-## The basic idea
+It tracks:
 
-Use it when one idea needs more than a few turns.
+- decisions
+- open gates
+- discarded paths
+- source boundaries
+- artifact readiness
 
-GPT first helps shape the idea:
+When continuity would degrade without retention, GPT may emit a minimal memory signal.
 
-- what the idea is becoming
-- which decisions are already clear
-- which points are still open
-- which paths were discarded
-- where the real decision points are
-- what should stay out of the final output
+Python appends the signal.  
+GPT does not manage or rewrite memory files.
 
-When something important should not be lost, GPT can save a tiny internal note.
-
-Those notes are added, not rewritten.
-
-Later, you can ask GPT to recap them:
-
-- “What have you noted so far?”
-- “Show me the open points.”
-- “What decisions are already clear?”
-- “What did we discard?”
-- “Are we ready to produce the final artifact?”
-
-The notes help GPT recover the thread.  
-They are not the final product.
-
-## How to use it with ChatGPT Projects
-
-1. Put the protocol files in the ChatGPT Project Source.
-2. Tell GPT to use Memory-Assisted Shaping.
-3. Work normally.
-4. Ask for a recap whenever you want.
-5. Ask for a final artifact only when the idea is ready.
+The final artifact is produced only after explicit approval.
 
 ## Files
 
@@ -74,30 +66,20 @@ During use, the tool may generate:
 
 Do not include generated session files in the clean source package.
 
-## When to ask for a recap
+## Recap and final artifacts
 
-You can ask at any time.
+Ask for a recap when you need to recover the current state.
 
 Useful prompts:
 
 - “Recap the internal notes.”
 - “Show me the current shape of the idea.”
 - “List decisions, open points, discarded paths, and artifact readiness.”
-- “Before we continue, reconstruct the state from the notes.”
 - “Are there any gates still open before we write the final artifact?”
-
-GPT should not read and rewrite the notes after every turn.  
-The notes stay in the background until you ask for them, request a checkpoint, or prepare a final artifact.
-
-## Final artifacts
 
 The final artifact is the clean output you eventually ask for.
 
-It can be a protocol, spec, brief, pitch, design document, implementation handoff, or any other output that fits the idea.
-
-The artifact should not contain the messy shaping process.
-
-It should not include raw notes, discarded paths, or internal reasoning unless you explicitly ask for an audit-style document.
+It should not contain raw notes, discarded paths, internal reasoning, or process trace unless you explicitly ask for an audit-style document.
 
 ---
 
