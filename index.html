@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory-Assisted Shaping</title>
+  <meta name="description" content="A ChatGPT Projects protocol for keeping long idea-shaping sessions coherent without turning notes into the work surface.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">ChatGPT Projects protocol</p>
+      <h1>🧠 Memory-Assisted Shaping</h1>
+      <p class="lead">Keep long idea-shaping sessions coherent without turning notes into the work surface.</p>
+      <p>Memory-Assisted Shaping is a ChatGPT Projects protocol for working on one idea across many turns while preserving decisions, gates, discarded paths, and source boundaries.</p>
+      <p>The final artifact stays separate from the shaping process.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping">View on GitHub</a>
+        <a class="button" href="#use-with-chatgpt-projects">Use with ChatGPT Projects</a>
+      </div>
+    </section>
+
+    <section class="card" id="problem">
+      <h2>🌊 The problem</h2>
+      <p>Long ChatGPT conversations drift.</p>
+      <ul>
+        <li>Examples start acting like decisions.</li>
+        <li>Discarded paths return.</li>
+        <li>Open questions disappear.</li>
+        <li>The final output starts carrying process residue.</li>
+      </ul>
+      <p>This is a problem when the conversation is not just a chat, but a shaping session.</p>
+    </section>
+
+    <section class="card" id="model">
+      <h2>⚙️ The model</h2>
+      <p>GPT shapes the idea first.</p>
+      <p>When continuity would degrade without retention, GPT may emit a small memory signal.</p>
+      <p>Python appends that signal.</p>
+      <ul>
+        <li>GPT does not manage the memory files.</li>
+        <li>GPT does not rewrite the notes.</li>
+        <li>The notes do not become the source of truth.</li>
+      </ul>
+      <p>They only help recover continuity.</p>
+    </section>
+
+    <section class="card" id="tracks">
+      <h2>🧩 What it tracks</h2>
+      <p>Memory-Assisted Shaping helps preserve:</p>
+      <ul class="grid-list">
+        <li>decisions</li>
+        <li>open gates</li>
+        <li>discarded paths</li>
+        <li>source boundaries</li>
+        <li>artifact readiness</li>
+        <li>changes in direction</li>
+      </ul>
+      <p>Only material that affects continuity should be retained.</p>
+      <p>Ordinary conversation does not become memory.</p>
+    </section>
+
+    <section class="split">
+      <div class="card">
+        <h2>✅ Use it when</h2>
+        <p>Use it when one idea needs more than a few turns.</p>
+        <ul>
+          <li>shaping a protocol</li>
+          <li>designing a workflow</li>
+          <li>clarifying a system</li>
+          <li>preparing a spec</li>
+          <li>refining an implementation handoff</li>
+          <li>keeping a long idea session coherent</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🚫 Do not use it when</h2>
+        <p>Do not use it for simple tasks.</p>
+        <ul>
+          <li>quick answers</li>
+          <li>ordinary brainstorming</li>
+          <li>general note-taking</li>
+          <li>storing everything</li>
+          <li>replacing judgment with memory</li>
+          <li>treating previous notes as authority</li>
+        </ul>
+        <p>Memory signals preserve context. They do not decide.</p>
+      </div>
+    </section>
+
+    <section class="card" id="final-artifacts">
+      <h2>📦 Final artifacts</h2>
+      <p>The final artifact is produced only after explicit approval.</p>
+      <p>It should be clean, standalone, and usable without the messy shaping trace.</p>
+      <p>It should not contain:</p>
+      <ul class="grid-list">
+        <li>raw notes</li>
+        <li>discarded paths</li>
+        <li>process commentary</li>
+        <li>internal reasoning</li>
+        <li>memory signal history</li>
+      </ul>
+      <p>Unless you explicitly ask for an audit-style document.</p>
+    </section>
+
+    <section class="card" id="files">
+      <h2>📁 Files</h2>
+      <div class="file-groups">
+        <div>
+          <h3>Core files</h3>
+          <ul>
+            <li><code>protocol.md</code></li>
+            <li><code>note-io.md</code></li>
+            <li><code>notes.py</code></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Generated during use</h3>
+          <ul>
+            <li><code>session_meta.json</code></li>
+            <li><code>session_notes.jsonl</code></li>
+            <li><code>session_export.json</code></li>
+          </ul>
+        </div>
+      </div>
+      <p>Generated session files are not part of the clean source package.</p>
+    </section>
+
+    <section class="card" id="use-with-chatgpt-projects">
+      <h2>🚀 Use with ChatGPT Projects</h2>
+      <p>Add the project files to ChatGPT Project Source.</p>
+      <p>Tell GPT:</p>
+      <blockquote>Use Memory-Assisted Shaping for this idea.</blockquote>
+      <p>Then work normally.</p>
+      <p>Ask for a recap when state matters. Ask for a final artifact only when the shape is ready.</p>
+    </section>
+
+    <section class="repo card">
+      <h2>🔗 Repository</h2>
+      <p>View the project on GitHub:</p>
+      <a href="https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping">github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping</a>
+    </section>
+  </main>
+</body>
+</html>
