@@ -1,0 +1,53 @@
+# Memory-Assisted Shaping
+
+Name: Memory-Assisted Shaping
+Type: AI continuity protocol
+URL: https://xxyoudeadpunkxx.github.io/Memory-Assisted-Shaping/
+Repository: https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping
+Runtime: ChatGPT Projects with append-only Python note persistence
+
+## Purpose
+Memory-Assisted Shaping is a ChatGPT Projects protocol for shaping one idea across a long conversation without losing decisions, gates, discarded paths, or source boundaries.
+
+## Operating model
+GPT shapes the idea before producing an artifact.
+When continuity would degrade without retention, GPT emits a minimal memory signal.
+Python timestamps and appends the signal.
+GPT does not own, normalize, or rewrite memory files.
+The final artifact is produced only after explicit approval.
+
+## Tracked state
+- decisions
+- open gates
+- discarded paths
+- source boundaries
+- artifact readiness
+
+## Live signal types
+- mode
+- shape
+- gate
+- decision
+- discard
+- tension
+- source
+- artifact
+
+## Repository files
+- protocol.md: behavioral protocol GPT should follow while shaping one active idea.
+- note-io.md: boundary between GPT signals and Python persistence.
+- notes.py: Python helper that appends internal notes.
+
+## Generated session files
+- session_meta.json
+- session_notes.jsonl
+- session_export.json
+
+## Usage
+Add the project files to ChatGPT Project Source.
+Tell GPT: Read protocol.md and use Memory-Assisted Shaping for this session.
+Ask for a recap when state matters.
+Ask for a final artifact only when the shape is ready.
+
+## Keywords
+AI protocol, ChatGPT Projects, long session continuity, idea shaping, append-only notes, source boundaries, Memory-Assisted Shaping
