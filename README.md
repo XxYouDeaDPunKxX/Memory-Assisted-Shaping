@@ -1,5 +1,3 @@
-# Memory-Assisted-Shaping
-A lightweight ChatGPT Projects protocol that keeps long idea-shaping sessions structurally coherent: GPT follows real gates and source boundaries, uses append-only internal notes to avoid drift, and produces clean final artifacts only after approval.
 # Memory-Assisted Shaping
 
 A lightweight ChatGPT Projects protocol that keeps long idea-shaping sessions structurally coherent: GPT follows real gates and source boundaries, uses append-only internal notes to avoid drift, and produces clean final artifacts only after approval.
@@ -51,18 +49,11 @@ They are not the final product.
 
 ## How to use it with ChatGPT Projects
 
-1. Put these files in a folder named `memory-assisted-shaping`.
-2. Zip that folder.
-3. Add the zip to your ChatGPT Project sources.
-4. Start a new chat for one idea.
-5. Tell GPT to use Memory-Assisted Shaping.
-6. Work normally.
-7. Ask for a recap whenever you want.
-8. Ask for a final artifact only when the idea is ready.
-
-A good starting message can be:
-
-> Use Memory-Assisted Shaping for this chat. Shape the idea first. Keep internal notes only when they help you avoid drift. Do not produce a final artifact until I ask.
+1. Put the protocol files in the ChatGPT Project Source.
+2. Tell GPT to use Memory-Assisted Shaping.
+3. Work normally.
+4. Ask for a recap whenever you want.
+5. Ask for a final artifact only when the idea is ready.
 
 ## Files
 
@@ -96,7 +87,7 @@ Useful prompts:
 - “Are there any gates still open before we write the final artifact?”
 
 GPT should not read and rewrite the notes after every turn.  
-The notes stay in the background until you ask for them, request a checkpoint, restart from a previous session, or prepare a final artifact.
+The notes stay in the background until you ask for them, request a checkpoint, or prepare a final artifact.
 
 ## Final artifacts
 
