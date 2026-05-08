@@ -21,6 +21,15 @@ Do not manage memory files.
 Emit minimal memory signals only when continuity would degrade without retention.
 Python owns append-only persistence.
 
+At session entry or re-entry:
+
+- read `protocol.md` and `note-io.md`;
+- locate `notes.py`;
+- if Python execution is available, run `python3 -S ./notes.py init`;
+- if Python execution is unavailable, state that protocol-only mode is active and append-only persistence is not active;
+- enter `READING_ALIGNMENT`;
+- do not repeat session entry every turn.
+
 ---
 
 ## 2. AUTHORITY ORDER
@@ -91,6 +100,14 @@ Only three operating states exist.
 
 Do not scan for memory signals.
 Emit one only when the current turn creates a retention risk.
+
+State transitions:
+
+| state | enter when | exit when | memory action | forbidden action |
+| --- | --- | --- | --- | --- |
+| `READING_ALIGNMENT` | session starts, re-entry occurs, or input needs source/gate alignment | candidate shape and real gates are clear enough to shape | append only declared constraints, candidate form, real gates, source conflicts, or material tension | final artifact production |
+| `SHAPING` | shape can be consolidated without final artifact production | gates are closed or deferred enough for the current move, or OP explicitly approves synthesis | append decisions, discarded paths, source changes, gate movement, artifact boundaries, or material recurring tension | final drafting |
+| `SYNTHESIS` | OP explicitly approves artifact production | requested artifact is produced or blocking contradiction appears | append approved mode transition before non-trivial synthesis when persistence is active | redesigning the shape while writing |
 
 ### 4.1 READING_ALIGNMENT
 
@@ -452,6 +469,17 @@ Emit a memory signal only when omitting it would likely lose:
 - source-of-truth boundary;
 - artifact boundary.
 
+Strong triggers require append when Python persistence is available:
+
+- OP-confirmed decision;
+- real gate opened, deferred, or closed;
+- discarded path likely to return;
+- source-of-truth change;
+- artifact boundary;
+- approved mode transition toward `SYNTHESIS`.
+
+Material tension requires append only when it is material and likely to recur.
+
 Do not emit memory signals for:
 
 - cosmetic preference;
@@ -497,8 +525,19 @@ Run all Python memory commands with `python3 -S`.
 Do not use plain `python3` for memory persistence commands.
 Keep memory commands stdlib-only unless OP explicitly approves dependencies.
 
+`Emit a memory signal` means run the append command when Python persistence is available.
+It does not mean writing a note in chat, keeping an internal bullet, or promising to remember.
+
+Append command:
+
+`python3 -S ./notes.py append --type <type> --text "<text>"`
+
+Use `--effect` only when the effect changes later shaping or synthesis.
+
 During live shaping, send minimal memory signals to Python when needed.
 Python appends, timestamps, assigns identifiers, performs minimal technical validation, and returns a receipt.
+
+If Python execution is unavailable, continue in protocol-only mode and do not claim append-only persistence is active.
 
 Do not:
 
@@ -517,6 +556,12 @@ Readback, recap, summary, export, or reinterpretation occur only when:
 - a checkpoint is explicitly requested;
 - re-entry requires it;
 - synthesis preparation requires consolidated state.
+
+Readback order:
+
+1. `summary`
+2. `tail` when recent context is needed
+3. `export` only for OP-requested export, handoff, or full consolidation
 
 Derived views are not source of truth.
 The append log is the persistence source for memory signals.
@@ -548,6 +593,16 @@ Memory signaling is not an OP-facing output block.
 Hide memory receipts unless useful or requested.
 Do not let memory signaling expand the response.
 
+After a required memory append, expose only the smallest truthful persistence status:
+
+- append succeeded: `Memory: <type> appended.`
+- Python unavailable: state once that append-only memory is not active.
+- append failed: surface a minimal persistence error and do not claim memory was appended.
+
+Do not expose payload, path, traceback, or full receipt unless OP asks or the persistence state is ambiguous.
+Protocol operations must not become recurring OP-facing commentary.
+Expose only what changes OP decision, persistence state, gate status, or artifact readiness.
+
 ---
 
 ## 14. SYNTHESIS DISCIPLINE
@@ -572,6 +627,10 @@ During synthesis:
 - do not reopen closed gates unless contradiction appears;
 - do not treat deferred gates as resolved;
 - keep the artifact local to its purpose.
+
+Before non-trivial synthesis after long, branched, resumed, or uncertain shaping, run readback.
+After OP approves non-trivial synthesis, append `mode` when Python persistence is active.
+Then produce the artifact.
 
 Memory signals may inform synthesis.
 They do not leak into the artifact as process trace.
@@ -603,6 +662,9 @@ The protocol fails if you:
 - contaminates final artifacts with process trace;
 - preserves flexibility at the cost of operability;
 - uses elegant language instead of mechanical clarity.
+- claims persisted memory when Python persistence is unavailable;
+- outputs a memory signal in chat instead of appending it when append is required and Python is available;
+- enters non-trivial synthesis with unresolved uncertainty about gates, decisions, discarded paths, or artifact readiness.
 
 ---
 

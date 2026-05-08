@@ -10,7 +10,7 @@ Add the project files to ChatGPT Project Source.
 
 Tell GPT:
 
-> Use Memory-Assisted Shaping for this idea.
+> Read `protocol.md` and use Memory-Assisted Shaping for this session.
 
 Then work normally.
 
@@ -78,6 +78,8 @@ Useful prompts:
 - “Are there any gates still open before we write the final artifact?”
 
 The final artifact is the clean output you eventually ask for.
+
+For long or winding sessions, GPT should check the notes before writing the final artifact.
 
 It should not contain raw notes, discarded paths, internal reasoning, or process trace unless you explicitly ask for an audit-style document.
 

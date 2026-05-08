@@ -46,6 +46,14 @@ During live shaping, the model may send a memory signal to Python only when the 
 
 Send the smallest useful signal.
 
+Emit means command execution, not chat text.
+
+When a live signal is required and Python execution is available, run:
+
+`python3 -S ./notes.py append --type <type> --text "<text>"`
+
+Use `--effect` only when the effect changes later shaping or synthesis.
+
 Default payload:
 
 - type
@@ -114,6 +122,15 @@ Do not return the full log after append.
 Do not summarize the log after append.
 Do not expose receipt to OP unless useful or requested.
 
+A minimal OP-facing marker is valid only after a successful append:
+
+`Memory: <type> appended.`
+
+If Python execution is unavailable, no append marker is valid.
+State once that append-only memory is not active.
+
+If append fails, surface the smallest persistence error needed to avoid fake persistence.
+
 ---
 
 ## 7. LIVE READ RESTRICTION
@@ -142,6 +159,12 @@ Readback is allowed only when:
 - synthesis preparation requires consolidated state
 
 Readback commands must not run automatically every turn.
+
+Readback order:
+
+1. `summary`
+2. `tail` when recent context is needed
+3. `export` only for OP-requested export, handoff, or full consolidation
 
 ---
 
@@ -208,6 +231,8 @@ The I/O boundary fails if you:
 - asks Python to infer shaping meaning
 - uses plain `python3` for memory persistence commands
 - lets persistence work dominate OP-facing shaping
+- claims append-only persistence when Python execution is unavailable
+- outputs a live memory signal in chat instead of running append when append is required and Python is available
 
 ---
 
