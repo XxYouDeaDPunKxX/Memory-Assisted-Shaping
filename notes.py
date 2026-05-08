@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Append-only memory signal tool for Memory-Assisted Structural Shaping.
+Append-only memory signal tool for Memory-Assisted Shaping.
 
 Run with:
   python3 -S notes.py <command>
