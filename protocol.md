@@ -1,4 +1,4 @@
-# Memory-Assisted-Shaping-Potocol
+# Memory-Assisted Shaping Protocol
 
 MODE: AI_ONLY
 SCOPE: SINGLE_IDEA_SHAPING_WITH_APPEND_ONLY_MEMORY_SIGNALS
