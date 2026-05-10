@@ -2,10 +2,20 @@
   "name": "Memory-Assisted Shaping",
   "type": "AI continuity protocol",
   "description": "A ChatGPT Projects protocol for shaping one idea across a long conversation without losing decisions, gates, discarded paths, or source boundaries.",
+  "url": "https://xxyoudeadpunkxx.github.io/Memory-Assisted-Shaping/",
   "page_url": "https://xxyoudeadpunkxx.github.io/Memory-Assisted-Shaping/",
   "repository": "https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping",
   "runtime": "ChatGPT Projects with append-only Python note persistence",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "canonical_files": [
+    "protocol.md",
+    "note-io.md",
+    "notes.py"
+  ],
+  "identity": "GPT shapes. Python persists. Memory stays append-only. The final artifact is produced only after explicit approval.",
   "purpose": "Keep long idea-shaping sessions coherent without turning notes into the work surface.",
+  "use_case": "Use Memory-Assisted Shaping when one idea needs a long conversation and the session must preserve decisions, open gates, discarded paths, source boundaries, and artifact readiness without turning notes into the main work surface.",
   "operating_model": [
     "GPT shapes the idea before producing an artifact.",
     "GPT emits a minimal memory signal when continuity would degrade without retention.",
@@ -55,6 +65,26 @@
     "Ask for a recap when state matters.",
     "Ask for a final artifact only when the shape is ready."
   ],
+  "discovery_set": {
+    "llms": "llms.txt",
+    "manifest": "raw-manifest.json",
+    "robots": "robots.txt",
+    "sitemap": "sitemap.xml",
+    "html_signals": [
+      "canonical URL",
+      "rel=alternate for llms.txt",
+      "rel=alternate for raw-manifest.json",
+      "JSON-LD SoftwareSourceCode metadata",
+      "Open Graph metadata",
+      "footer machine-readable links"
+    ]
+  },
+  "machine_readable_files": [
+    "llms.txt",
+    "raw-manifest.json",
+    "robots.txt",
+    "sitemap.xml"
+  ],
   "keywords": [
     "AI protocol",
     "ChatGPT Projects",
@@ -62,6 +92,9 @@
     "idea shaping",
     "append-only notes",
     "source boundaries",
-    "Memory-Assisted Shaping"
+    "Memory-Assisted Shaping",
+    "AI continuity protocol",
+    "artifact readiness",
+    "session drift control"
   ]
 }
