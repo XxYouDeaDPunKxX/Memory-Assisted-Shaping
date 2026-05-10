@@ -60,8 +60,8 @@
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
-  <main>
-    <section class="hero shell">
+  <main class="page-flow">
+    <section class="hero shell phi-section" id="top">
       <nav class="topbar" aria-label="Page navigation">
         <a href="#flow">Flow</a>
         <a href="#comparison">Comparison</a>
@@ -69,12 +69,12 @@
         <a href="https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping">GitHub</a>
       </nav>
 
-      <div class="hero-grid">
-        <div class="hero-copy">
+      <div class="hero-grid phi-pair phi-pair-hero">
+        <div class="hero-copy copy-stack copy-stack-hero">
           <p class="kicker">AI protocol · ChatGPT Projects · append-only continuity</p>
           <h1>Keep the shape.<br><span>Lose the drift.</span></h1>
           <p class="lead">Memory-Assisted Shaping keeps long idea-shaping sessions coherent without turning notes into the work surface.</p>
-          <div class="hero-actions">
+          <div class="hero-actions cta-row">
             <a class="button primary" href="https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping">View repository</a>
             <a class="button" href="#use">Use with ChatGPT Projects</a>
           </div>
@@ -98,42 +98,42 @@
       </div>
     </section>
 
-    <section class="strip shell" id="flow" aria-label="Protocol flow">
-      <div>
+    <section class="strip shell phi-section card-grid card-grid-five" id="flow" aria-label="Protocol flow">
+      <div class="info-card step-card">
         <span>01</span>
         <strong>OP input</strong>
         <p>One idea enters the session.</p>
       </div>
-      <div>
+      <div class="info-card step-card">
         <span>02</span>
         <strong>GPT shaping</strong>
         <p>Gates, decisions, and boundaries stay visible.</p>
       </div>
-      <div>
+      <div class="info-card step-card">
         <span>03</span>
         <strong>Minimal signal</strong>
         <p>Only continuity-critical material is retained.</p>
       </div>
-      <div>
+      <div class="info-card step-card">
         <span>04</span>
         <strong>Python append</strong>
         <p>Persistence is append-only and model-independent.</p>
       </div>
-      <div>
+      <div class="info-card step-card">
         <span>05</span>
         <strong>Clean artifact</strong>
         <p>Produced only after explicit approval.</p>
       </div>
     </section>
 
-    <section class="problem shell">
+    <section class="problem shell phi-section copy-stack centered-copy">
       <div class="section-label">The failure mode</div>
       <h2>Long chats do not fail all at once. They drift.</h2>
       <p>Examples harden into decisions. Discarded paths return. Open gates vanish. Final artifacts start carrying process residue.</p>
     </section>
 
-    <section class="comparison shell" id="comparison">
-      <article class="panel danger">
+    <section class="comparison shell phi-section card-grid card-grid-two" id="comparison">
+      <article class="panel danger info-card panel-card">
         <p class="tag">Without Memory-Assisted Shaping</p>
         <h3>Conversation residue leaks into the artifact.</h3>
         <ul>
@@ -143,7 +143,7 @@
           <li>Final output carries shaping noise.</li>
         </ul>
       </article>
-      <article class="panel success">
+      <article class="panel success info-card panel-card">
         <p class="tag">With Memory-Assisted Shaping</p>
         <h3>The session keeps operational continuity.</h3>
         <ul>
@@ -155,36 +155,36 @@
       </article>
     </section>
 
-    <section class="bento shell" aria-label="Core mechanics">
-      <article class="tile large">
+    <section class="bento shell phi-section bento-grid" aria-label="Core mechanics">
+      <article class="tile large info-card">
         <p class="tag">Core mechanic</p>
         <h2>GPT shapes. Python persists.</h2>
         <p>GPT emits small memory signals only when continuity would degrade without retention. Python timestamps and appends. The model does not own, normalize, or rewrite memory files.</p>
       </article>
-      <article class="tile">
-        <span class="icon">🚧</span>
+      <article class="tile info-card">
+        <span class="icon" aria-hidden="true">🚧</span>
         <h3>Real gates</h3>
         <p>Only points that change scope, source of truth, runtime, lifecycle, or artifact correctness become gates.</p>
       </article>
-      <article class="tile">
-        <span class="icon">🗑️</span>
+      <article class="tile info-card">
+        <span class="icon" aria-hidden="true">🗑️</span>
         <h3>Discarded paths</h3>
         <p>Rejected directions stay recoverable so they do not silently re-enter the session.</p>
       </article>
-      <article class="tile">
-        <span class="icon">📚</span>
+      <article class="tile info-card">
+        <span class="icon" aria-hidden="true">📚</span>
         <h3>Source boundaries</h3>
         <p>Declared material, inference, and prior memory do not collapse into the same authority layer.</p>
       </article>
-      <article class="tile">
-        <span class="icon">📦</span>
+      <article class="tile info-card">
+        <span class="icon" aria-hidden="true">📦</span>
         <h3>Artifact separation</h3>
         <p>The final artifact is clean, standalone, and produced only after explicit approval.</p>
       </article>
     </section>
 
-    <section class="fit shell">
-      <article>
+    <section class="fit shell phi-section card-grid card-grid-two">
+      <article class="info-card panel-card">
         <h2>✅ Use it when</h2>
         <ul>
           <li>one idea needs more than a few turns</li>
@@ -193,7 +193,7 @@
           <li>you need recap or re-entry without drift</li>
         </ul>
       </article>
-      <article>
+      <article class="info-card panel-card">
         <h2>🚫 Do not use it when</h2>
         <ul>
           <li>you only need a quick answer</li>
@@ -204,37 +204,39 @@
       </article>
     </section>
 
-    <section class="files shell" id="files">
-      <div class="section-label">Package</div>
-      <h2>Three files. One boundary.</h2>
-      <div class="file-row">
-        <article>
+    <section class="files shell phi-section framed-section section-stack" id="files">
+      <div class="section-heading copy-stack">
+        <div class="section-label">Package</div>
+        <h2>Three files. One boundary.</h2>
+      </div>
+      <div class="file-row card-grid card-grid-three">
+        <article class="info-card file-card">
           <code>protocol.md</code>
           <p>Behavioral contract for shaping one active idea.</p>
         </article>
-        <article>
+        <article class="info-card file-card">
           <code>note-io.md</code>
           <p>Boundary between GPT signals and Python persistence.</p>
         </article>
-        <article>
+        <article class="info-card file-card">
           <code>notes.py</code>
           <p>Small stdlib-only helper for append-only session notes.</p>
         </article>
       </div>
     </section>
 
-    <section class="use shell" id="use">
-      <div>
+    <section class="use shell phi-section framed-section phi-pair phi-pair-use" id="use">
+      <div class="copy-stack">
         <p class="kicker">Use with ChatGPT Projects</p>
         <h2>Add the files. Tell GPT the mode. Shape normally.</h2>
+        <p>Ask for a recap when state matters. Ask for a final artifact only when the shape is ready.</p>
+        <a class="button primary" href="https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping">Open repository</a>
       </div>
       <blockquote>Use Memory-Assisted Shaping for this idea.</blockquote>
-      <p>Ask for a recap when state matters. Ask for a final artifact only when the shape is ready.</p>
-      <a class="button primary" href="https://github.com/XxYouDeaDPunKxX/Memory-Assisted-Shaping">Open repository</a>
     </section>
   </main>
 
-  <footer class="site-footer shell">
+  <footer class="site-footer shell section-stack">
     <p>Memory-Assisted Shaping | CC BY-SA 4.0</p>
     <!-- Discovery Set: low-noise links for crawlers, bots, and LLM readers. -->
     <p class="machine-links">
