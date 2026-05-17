@@ -1,4 +1,4 @@
-# 🧠 Memory-Assisted Shaping
+# 🧠 GPT-Memory-Assisted Shaping
 
 A ChatGPT Projects protocol for shaping one idea across a long conversation without losing decisions, gates, discarded paths, or source boundaries.
 
@@ -10,7 +10,7 @@ Add the project files to ChatGPT Project Source.
 
 Tell GPT:
 
-> Read `protocol.md` and use Memory-Assisted Shaping for this session.
+> Read `protocol.md` and use GPT-Memory-Assisted Shaping for this session.
 
 Then work normally.
 
@@ -26,7 +26,7 @@ Discarded paths return.
 Open questions disappear.  
 The final output starts carrying process residue.
 
-Memory-Assisted Shaping gives GPT a small continuity layer without turning the conversation into note management.
+GPT-Memory-Assisted Shaping gives GPT a small continuity layer without turning the conversation into note management.
 
 ## ⚙️ Operating model
 
