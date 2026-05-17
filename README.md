@@ -83,6 +83,14 @@ For long or winding sessions, GPT should check the notes before writing the fina
 
 It should not contain raw notes, discarded paths, internal reasoning, or process trace unless you explicitly ask for an audit-style document.
 
+## 🤖 AI-assisted development
+
+This project was developed with AI assistance.
+
+The project, documentation, and repository materials were shaped through human-directed work supported by AI tools during drafting, structuring, review, and refinement.
+
+AI assistance does not make the project automatically correct, complete, or suitable for every use case. Read it, test it, and adapt it to your own context.
+
 ---
 
 <details>
